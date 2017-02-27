@@ -40,12 +40,14 @@
 
 
 - (IBAction)creat:(id)sender {
+    //创建手势密码
     [YWUnlockView showUnlockViewWithType:YWUnlockViewCreate callBack:^(BOOL result) {
         NSLog(@"-->%@",@(result));
     }];
 }
 
 - (IBAction)outh:(id)sender {
+    //验证手势密码
     [YWUnlockView showUnlockViewWithType:YWUnlockViewUnlock callBack:^(BOOL result) {
         NSLog(@"-->%@",@(result));
     }];
