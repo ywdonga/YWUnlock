@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YWUnlockView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teG-tP-yKW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyG-rk-Xkg">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="64"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="mqK-ty-SJK"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <state key="normal" image="gesture_back.png"/>
+                            <connections>
+                                <action selector="backButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="2M1-sR-QUU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="FAa-2h-wzC"/>
+                        <constraint firstAttribute="bottom" secondItem="gyG-rk-Xkg" secondAttribute="bottom" id="iiS-5j-r6Z"/>
+                        <constraint firstItem="gyG-rk-Xkg" firstAttribute="leading" secondItem="teG-tP-yKW" secondAttribute="leading" id="nAL-jg-8qH"/>
+                        <constraint firstItem="gyG-rk-Xkg" firstAttribute="top" secondItem="teG-tP-yKW" secondAttribute="top" id="od9-tW-1Ym"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xI-kz-rJS" customClass="YWUnlockPreviewView">
+                    <rect key="frame" x="158" y="74" width="60" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="N6m-3a-W2i"/>
+                        <constraint firstAttribute="width" secondItem="4xI-kz-rJS" secondAttribute="height" id="xmh-4t-JJD"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gesture_headIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="TsR-bw-W8u">
+                    <rect key="frame" x="158" y="74" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="9FV-O3-88V"/>
+                        <constraint firstAttribute="width" secondItem="TsR-bw-W8u" secondAttribute="height" id="k4l-au-KMV"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请绘制手势密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sy2-Mx-F6p">
+                    <rect key="frame" x="138" y="164" width="100" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.2274509804" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFm-QJ-9xF" customClass="YWGesturesUnlockView">
+                    <rect key="frame" x="0.0" y="191" width="375" height="375"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="iFm-QJ-9xF" secondAttribute="height" multiplier="1:1" id="px1-hr-c4l"/>
+                    </constraints>
+                </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P25-bp-0Ew">
+                    <rect key="frame" x="158.5" y="628" width="58" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="58" id="SvV-55-jLu"/>
+                        <constraint firstAttribute="height" constant="29" id="UoK-4S-00H"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="重新绘制">
+                        <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="resetGesturePassword:" destination="iN0-l3-epB" eventType="touchUpInside" id="din-R5-Bw7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iFm-QJ-9xF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0nh-9J-hOc"/>
+                <constraint firstItem="TsR-bw-W8u" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IWj-1y-lxd"/>
+                <constraint firstAttribute="trailing" secondItem="teG-tP-yKW" secondAttribute="trailing" id="IjP-J9-se3"/>
+                <constraint firstItem="teG-tP-yKW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ImG-Ra-JSO"/>
+                <constraint firstItem="sy2-Mx-F6p" firstAttribute="top" secondItem="4xI-kz-rJS" secondAttribute="bottom" constant="30" id="LcG-XF-oQw"/>
+                <constraint firstItem="teG-tP-yKW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OGs-i1-aOQ"/>
+                <constraint firstItem="P25-bp-0Ew" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XtO-um-gJT"/>
+                <constraint firstAttribute="bottom" secondItem="P25-bp-0Ew" secondAttribute="bottom" constant="10" id="Yeb-t0-xBc"/>
+                <constraint firstItem="4xI-kz-rJS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="b2D-eD-Yiq"/>
+                <constraint firstItem="sy2-Mx-F6p" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eUG-3e-2Am"/>
+                <constraint firstAttribute="trailing" secondItem="iFm-QJ-9xF" secondAttribute="trailing" id="fgM-9I-Bmc"/>
+                <constraint firstItem="TsR-bw-W8u" firstAttribute="top" secondItem="teG-tP-yKW" secondAttribute="bottom" constant="10" id="gcQ-2l-7WM"/>
+                <constraint firstItem="4xI-kz-rJS" firstAttribute="top" secondItem="teG-tP-yKW" secondAttribute="bottom" constant="10" id="m6S-FN-Dnd"/>
+                <constraint firstItem="iFm-QJ-9xF" firstAttribute="top" secondItem="sy2-Mx-F6p" secondAttribute="bottom" constant="10" id="udw-Ch-yA0"/>
+            </constraints>
+            <connections>
+                <outlet property="gesturesUnlockView" destination="iFm-QJ-9xF" id="DNe-Dy-h7V"/>
+                <outlet property="iconImageView" destination="TsR-bw-W8u" id="Ukt-do-8yY"/>
+                <outlet property="resetGesturesPasswordButton" destination="P25-bp-0Ew" id="tNO-ab-vQ1"/>
+                <outlet property="statusLabel" destination="sy2-Mx-F6p" id="vlS-0O-zBO"/>
+                <outlet property="unlockPreviewView" destination="4xI-kz-rJS" id="g6I-Xj-IXH"/>
+            </connections>
+            <point key="canvasLocation" x="47.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gesture_back.png" width="12" height="20"/>
+        <image name="gesture_headIcon.png" width="57" height="56"/>
+    </resources>
+</document>
